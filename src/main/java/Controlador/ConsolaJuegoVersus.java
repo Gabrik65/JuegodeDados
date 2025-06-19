@@ -3,8 +3,8 @@ package Controlador;
 import Modelo.JuegoVersus;
 
 public class ConsolaJuegoVersus {
-        private final String[] opciones = {"Una Ronda","Tres Rondas","Cinco Rondas","Salir"};
-        private final MenuOpciones menuJuegoDados = new MenuOpciones("Juego de Dados",opciones);
+        private final String[] opciones = {"Una Ronda","Tres Rondas","Cinco Rondas","Volver"};
+        private final MenuOpciones menuOpciones = new MenuOpciones("Juego de Dados",opciones);
         public JuegoVersus juego = new JuegoVersus();
 
         public void menuJuego(){
@@ -12,26 +12,20 @@ public class ConsolaJuegoVersus {
             boolean salir = false;
 
             do {
-                menuJuegoDados.mostrarOpciones();
-                opcion = menuJuegoDados.obtenerOpcionInt();
-                if (menuJuegoDados.getCantidadOpciones() == opcion){
-                    salir = menuJuegoDados.confirmarSalida();
-                }
-                ejecutarOpcion(opcion);
-            } while (opcion != menuJuegoDados.getCantidadOpciones() && salir);
+                menuOpciones.mostrarOpciones();
+                opcion = menuOpciones.obtenerOpcionInt();
+
+                if (opcion == menuOpciones.getCantidadOpciones()) salir = true;
+                else ejecutarOpcion(opcion);
+
+            } while (!salir);
         }
 
         public void ejecutarOpcion(int opcion){
-            switch (opcion){
-                case 1:
-                    juego.ronda(1);
-                    break;
-                case 2:
-                    juego.ronda(3);
-                    break;
-                case 3:
-                    juego.ronda(5);
-                    break;
+            switch (opcion) {
+                case 1 -> juego.ronda(1);
+                case 2 -> juego.ronda(3);
+                case 3 -> juego.ronda(5);
             }
         }
     }

@@ -59,14 +59,13 @@ public class MenuOpciones {
 
     public String obtnerOpcionString(){
         System.out.println("Elija su opcion:");
-        String scannerString = scanner.nextLine().toLowerCase();
+        String scannerString = scanner.next().toLowerCase();
         return scannerString;
     }
 
     public boolean confirmarSalida(){
         System.out.println("Esta seguro que quiere salir? (s/n)");
         String opcion = obtnerOpcionString();
-
         return opcion.equals("s");
     }
 

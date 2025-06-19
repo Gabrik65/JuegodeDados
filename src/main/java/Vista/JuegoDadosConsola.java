@@ -17,22 +17,22 @@ public class JuegoDadosConsola {
         do {
             menuJuegoDados.mostrarOpciones();
             opcion = menuJuegoDados.obtenerOpcionInt();
-            if (menuJuegoDados.getCantidadOpciones() == opcion){
+
+            if (opcion == menuJuegoDados.getCantidadOpciones()) {
                 salir = menuJuegoDados.confirmarSalida();
+            } else {
+                ejecutarOpcion(opcion);
             }
-            ejecutarOpcion(opcion);
-        } while (opcion != menuJuegoDados.getCantidadOpciones() && salir);
+
+        } while (!salir);
     }
 
     public void ejecutarOpcion(int opcion){
-        switch (opcion){
-            case 1:
-                juego.jugar();
-                juego.resultadosJuego();
-                break;
-            case 2:
-                versus.menuJuego();
-                break;
+        if (opcion == 1) {
+            juego.jugar();
+            juego.resultadosJuego();
+        }else if(opcion == 2){
+            versus.menuJuego();
         }
     }
 
