@@ -20,8 +20,8 @@ public class JuegoVersus {
                 turno(resultado1,resultado2);
             }
 
-            puntajeJugador1 = jugador1.getResultado();
-            puntajeJugador2 = jugador2.getResultado();
+            puntajeJugador1 += jugador1.getResultado();
+            puntajeJugador2 += jugador2.getResultado();
 
             System.out.println();
         }
@@ -30,11 +30,11 @@ public class JuegoVersus {
     }
 
     private void turno(int resultado1, int resultado2){
-        System.out.println("Turno Jugador 1:");
-        System.out.println("Resultado Jugador 1: " + resultado1);
+        System.out.print("Turno Jugador 1: ");
+        System.out.println( resultado1);
 
-        System.out.println("Turno Jugador 2:");
-        System.out.println("Resultado Jugador 2: " + resultado2);
+        System.out.print("Turno Jugador 2: ");
+        System.out.println(resultado2);
 
         if (resultado1 > resultado2) {
             System.out.println("Gana la ronda el Jugador 1");
