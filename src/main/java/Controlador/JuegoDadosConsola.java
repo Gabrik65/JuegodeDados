@@ -5,7 +5,7 @@ import Modelo.JuegoDados;
 import Vista.MenuOpciones;
 
 public class JuegoDadosConsola {
-    private final String[] opciones = {"Lanzar Dados", "Mostrar Dados", "Sumar Dados","Salir"};
+    private final String[] opciones = {"Lanzar Dados","Salir"};
     private final MenuOpciones menuJuegoDados = new MenuOpciones("Juego de Dados",opciones);
     private final JuegoDados juego = new JuegoDados();
 
@@ -24,7 +24,12 @@ public class JuegoDadosConsola {
     }
 
     public void ejecutarOpcion(int opcion){
-
+        switch (opcion){
+            case 1:
+                juego.jugar();
+                juego.resultadosJuego();
+                break;
+        }
     }
 
 }
