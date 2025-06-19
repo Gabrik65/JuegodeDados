@@ -1,0 +1,90 @@
+@startuml
+title Library Management System - Revised Class Diagram
+left to right direction
+skinparam classAttributeIconSize 0
+
+class Dado {
+ - valor_actual : int
+ - random : Random
+
+ + lanzar () : int
+ + getValor () : int
+ }
+
+class JuegoDados{
+    - dado1 : Dado
+    - dado2 : Dado
+    - suma : int
+
+    + jugar () : void
+    + esGanador () : boolean
+    + resultado () : void
+    + volverAlMenu () : void
+    + getSuma () : int
+}
+
+class Jugador{
+    - juego : JuegoDados
+    - resultado : int
+
+    + jugadorLanzar() : void
+    + getResultado : int
+}
+
+class MenuOpciones{
+    - scanner : Scanner
+    - nombre : String
+    - opciones : String[]
+    - cantidadOpciones : int
+    - largoMaximo : int
+
+    - largoMaximoOpcion() : int
+    + mostrarOpciones() : void
+    + obtenerOpcionInt() : int
+    + obtnerOpcionString() : String
+    + confirmarSalida() : boolean
+    +getNombre() : String
+    +getNombreOpcion ( indice : int ) : String
+    +getCantidadOpciones () : int
+}
+
+class JuegoDadosConsola{
+    - opciones : String[]
+    - menuJuegoDados : MenuOpciones
+    - juego : JuegoDados
+
+    + menuJuego () : void
+    + ejecutarOpcion (opcion : int) : void
+}
+
+class JuegoVersus{
+    - jugador1 : Jugador
+    - jugador2 : Jugador
+    - puntajeJugador1 : int
+    - puntajeJugador2 : int
+
+    + ronda ( turnos : int) : void
+    - turno (resultado1 : int , resultado2 : int) : void
+    -turnoJugador (jugador Jugador) : int
+    - mostrarGanadorFinal() : void
+}
+
+class ConsolaJuegoVersus{
+    - opciones : String[]
+    - menuOpciones : MenuOpciones
+    - juego : JuegoVersus
+
+    + menuJuego() : void
+    + ejecutarOpcion (opcion : int)) : void
+}
+
+JuegoDados "2" -- "*" Dado : es usado
+JuegoDadosConsola "1" o-- "*" JuegoDados :maneja
+JuegoVersus "4" -- "*" Dado : es usado
+JuegoVersus "1" -- "*" Jugador : es usado
+ConsolaJuegoVersus "1" o-- "*" JuegoVersus : maneja
+ConsolaJuegoVersus "1" -- "*" MenuOpciones : es usado
+JuegoDadosConsola "1" o-- "*" ConsolaJuegoVersus: maneja
+JuegoDadosConsola "1" -- "*" MenuOpciones : es usado
+Jugador "1" -- "*" JuegoDados: es usado
+@enduml
