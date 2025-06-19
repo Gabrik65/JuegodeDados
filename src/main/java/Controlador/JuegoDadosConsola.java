@@ -16,7 +16,7 @@ public class JuegoDadosConsola {
             menuJuegoDados.mostrarOpciones();
             opcion = menuJuegoDados.obtenerOpcionInt();
             if (menuJuegoDados.getCantidadOpciones() == opcion){
-
+                salir = menuJuegoDados.confirmarSalida();
             }
             System.out.println("Eligio " + opcion + " por ende "+ menuJuegoDados.getNombreOpcion(opcion));
         } while (opcion != menuJuegoDados.getCantidadOpciones() && salir);
