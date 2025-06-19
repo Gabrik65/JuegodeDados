@@ -1,7 +1,7 @@
 package Controlador;
 
 import Modelo.Dado;
-import Modelo.MenuOpciones;
+import Vista.MenuOpciones;
 
 public class JuegoDadosConsola {
     private final String[] opciones = {"Lanzar Dados", "Mostrar Dados", "Sumar Dados","Salir"};

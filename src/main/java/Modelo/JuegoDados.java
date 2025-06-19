@@ -24,11 +24,16 @@ public class JuegoDados {
         return suma == 7;
     }
 
-    public void resultadosJuego(int dado1, int dado2){
+    public void resultadosJuego(int dado1, int dado2, int suma){
         System.out.println("Resultados del Juego");
         System.out.println("Primer dado: " + dado1);
         System.out.println("Segundo dado: " + dado2);
 
         System.out.println("Suma: " + dado1 + dado2);
+        if (esGanador(suma)){
+            System.out.println("Juegador Gana");
+        }else {
+            System.out.println("Juegador Pierde");
+        }
     }
 }
