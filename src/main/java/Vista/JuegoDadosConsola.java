@@ -4,9 +4,10 @@ import Controlador.MenuOpciones;
 import Modelo.JuegoDados;
 
 public class JuegoDadosConsola {
-    private final String[] opciones = {"Lanzar Dados","Salir"};
+    private final String[] opciones = {"Lanzar Dados","Juego Versus","Salir"};
     private final MenuOpciones menuJuegoDados = new MenuOpciones("Juego de Dados",opciones);
     private final JuegoDados juego = new JuegoDados();
+
 
     public void menuJuego(){
         int opcion;
