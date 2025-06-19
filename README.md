@@ -1,7 +1,6 @@
 Programa Juego de Dados:
 ---------------------------------------------------------
-Gabriel Vergara
-Gabriel Valenzuela
+Gabriel Vergara  -  Gabriel Valenzuela
 ---------------------------------------------------------
 Este proyecto implementa un juego de dados por consola en Java, donde dos jugadores compiten lanzando dados por rondas. El jugador con mayor puntaje acumulado gana la partida.
 
