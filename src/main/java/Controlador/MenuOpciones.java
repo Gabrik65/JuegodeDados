@@ -1,4 +1,4 @@
-package Vista;
+package Controlador;
 
 import java.util.Scanner;
 

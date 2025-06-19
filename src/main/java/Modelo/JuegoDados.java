@@ -1,6 +1,6 @@
 package Modelo;
 
-import Controlador.JuegoDadosConsola;
+import Vista.JuegoDadosConsola;
 
 /**
  * Clase que representa una partida con dos dados.
@@ -34,6 +34,7 @@ public class JuegoDados {
         }
         volverAlMenu();
     }
+
      private void volverAlMenu(){
          JuegoDadosConsola juego = new JuegoDadosConsola();
          juego.menuJuego();

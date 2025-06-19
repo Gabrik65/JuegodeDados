@@ -1,8 +1,7 @@
-package Controlador;
+package Vista;
 
-import Modelo.Dado;
+import Controlador.MenuOpciones;
 import Modelo.JuegoDados;
-import Vista.MenuOpciones;
 
 public class JuegoDadosConsola {
     private final String[] opciones = {"Lanzar Dados","Salir"};
