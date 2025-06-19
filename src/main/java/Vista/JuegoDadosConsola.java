@@ -1,5 +1,6 @@
 package Vista;
 
+import Controlador.ConsolaJuegoVersus;
 import Controlador.MenuOpciones;
 import Modelo.JuegoDados;
 
@@ -7,7 +8,7 @@ public class JuegoDadosConsola {
     private final String[] opciones = {"Lanzar Dados","Juego Versus","Salir"};
     private final MenuOpciones menuJuegoDados = new MenuOpciones("Juego de Dados",opciones);
     private final JuegoDados juego = new JuegoDados();
-
+    private final ConsolaJuegoVersus versus = new ConsolaJuegoVersus();
 
     public void menuJuego(){
         int opcion;
@@ -28,6 +29,9 @@ public class JuegoDadosConsola {
             case 1:
                 juego.jugar();
                 juego.resultadosJuego();
+                break;
+            case 2:
+                versus.menuJuego();
                 break;
         }
     }

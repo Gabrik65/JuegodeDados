@@ -1,13 +1,11 @@
 package Controlador;
 
-import Modelo.JuegoDados;
-
-import java.util.Scanner;
+import Modelo.JuegoVersus;
 
 public class ConsolaJuegoVersus {
-        private final String[] opciones = {"Nueva ronda","Salir"};
+        private final String[] opciones = {"Una Ronda","Tres Rondas","Cinco Rondas","Salir"};
         private final MenuOpciones menuJuegoDados = new MenuOpciones("Juego de Dados",opciones);
-        private final JuegoDados juego = new JuegoDados();
+        public JuegoVersus juego = new JuegoVersus();
 
         public void menuJuego(){
             int opcion;
@@ -26,10 +24,14 @@ public class ConsolaJuegoVersus {
         public void ejecutarOpcion(int opcion){
             switch (opcion){
                 case 1:
-                    juego.jugar();
-                    juego.resultadosJuego();
+                    juego.ronda(1);
+                    break;
+                case 2:
+                    juego.ronda(3);
+                    break;
+                case 3:
+                    juego.ronda(5);
                     break;
             }
         }
-
     }

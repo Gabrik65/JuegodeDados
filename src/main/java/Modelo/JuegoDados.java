@@ -34,9 +34,10 @@ public class JuegoDados {
         }
         volverAlMenu();
     }
+    private void volverAlMenu(){
+        JuegoDadosConsola juego = new JuegoDadosConsola();
+        juego.menuJuego();
+    }
 
-     private void volverAlMenu(){
-         JuegoDadosConsola juego = new JuegoDadosConsola();
-         juego.menuJuego();
-     }
+    public int getSuma(){return suma;}
 }
