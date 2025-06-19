@@ -1,5 +1,7 @@
 import Modelo.Dado;
 import Modelo.JuegoDados;
+import Modelo.JuegoVersus;
+import Modelo.Jugador;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,14 +9,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class JuegoDadosTest {
 
     private Dado dado1;
-    private Dado dado2;
     private JuegoDados juego;
+    private JuegoVersus versus;
 
     @BeforeEach
     public void setUp() {
         dado1 = new Dado();
-        dado2 = new Dado();
         juego = new JuegoDados();
+        versus = new JuegoVersus();
     }
 
     @Test
@@ -37,4 +39,12 @@ public class JuegoDadosTest {
         assertFalse(juego.esGanador(11), "Pierde si la suma no es no es 7");
     }
 
+    @Test
+    public void testJugadorJversus(){
+        Jugador jugador = new Jugador();
+        for (int i = 0; i < 100; i++) {
+            int valor = versus.turnoJugador(jugador);
+            assertTrue(valor >= 2 && valor <= 12, "Suma de Dados debe estar entre 2 y 12");
+        }
+    }
 }

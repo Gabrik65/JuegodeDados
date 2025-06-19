@@ -45,7 +45,7 @@ public class JuegoVersus {
         }
 
     }
-    private int turnoJugador(Jugador jugador){
+    public int turnoJugador(Jugador jugador){
         jugador.jugadorLanzar();
         return jugador.getResultado();
     }
