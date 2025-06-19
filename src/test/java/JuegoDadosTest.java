@@ -14,7 +14,7 @@ public class JuegoDadosTest {
     public void setUp() {
         dado1 = new Dado();
         dado2 = new Dado();
-        juego = new JuegoDados(dado1, dado2);
+        juego = new JuegoDados();
     }
 
 
