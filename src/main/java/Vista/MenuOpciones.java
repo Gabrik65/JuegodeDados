@@ -1,4 +1,4 @@
-package Modelo;
+package Vista;
 
 import java.util.Scanner;
 
@@ -40,7 +40,7 @@ public class MenuOpciones {
         System.out.println("\n"+"=".repeat(largoMaximo)+"\n");
     }
 
-    public int obtenerOpcion() {
+    public int obtenerOpcionInt() {
         String scannerString;
         int opcion;
 
@@ -55,6 +55,19 @@ public class MenuOpciones {
         }
 
         return opcion;
+    }
+
+    public String obtnerOpcionString(){
+        System.out.println("Elija su opcion:");
+        String scannerString = scanner.nextLine().toLowerCase();
+        return scannerString;
+    }
+
+    public boolean confirmarSalida(){
+        System.out.println("Esta seguro que quiere salir? (s/n)");
+        String opcion = obtnerOpcionString();
+
+        return opcion.equals("s");
     }
 
     public String getNombre() {
