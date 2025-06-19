@@ -1,6 +1,6 @@
 package Modelo;
 
-import Controlador.JuegoDadosConsola;
+import Vista.JuegoDadosConsola;
 
 /**
  * Clase que representa una partida con dos dados.
