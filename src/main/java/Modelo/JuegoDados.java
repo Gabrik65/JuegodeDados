@@ -38,4 +38,6 @@ public class JuegoDados {
          JuegoDadosConsola juego = new JuegoDadosConsola();
          juego.menuJuego();
      }
+
+     public int getSuma(){return suma;}
 }
