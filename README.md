@@ -13,4 +13,5 @@ Controlador/: lógica de control e interacción (ConsolaJuegoVersus, MenuOpcione
 Vista/: interfaz por consola (JuegoDadosConsola).
 
 Test/: pruebas JUnit para validar el funcionamiento de los componentes principales.
+
 --------------------------------------------------------------------------------------------------
