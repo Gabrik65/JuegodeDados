@@ -5,7 +5,7 @@ import Modelo.JuegoVersus;
 public class ConsolaJuegoVersus {
         private final String[] opciones = {"Una Ronda","Tres Rondas","Cinco Rondas","Volver"};
         private final MenuOpciones menuOpciones = new MenuOpciones("Juego de Dados",opciones);
-        public JuegoVersus juego = new JuegoVersus();
+        private final JuegoVersus juego = new JuegoVersus();
 
         public void menuJuego(){
             int opcion;
