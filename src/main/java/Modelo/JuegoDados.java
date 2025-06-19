@@ -4,13 +4,11 @@ package Modelo;
  * Clase que representa una partida con dos dados.
  */
 public class JuegoDados {
-    private final Dado dado1;
-    private final Dado dado2;
+    private final Dado dado1 = new Dado();
+    private final Dado dado2 = new Dado();
 
 
-    public JuegoDados(Dado dado1, Dado dado2) {
-        this.dado1 = dado1;
-        this.dado2 = dado2;
+    public JuegoDados() {
         int suma = jugar();
     }
 
